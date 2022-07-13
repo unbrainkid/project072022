@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все заявления
+{% endblock %}
+
+{% block body %}
+
+    <h2>Все заявления</h2>
+    <form method ="post" class = "container">
+        <input type="text" placeholder="Фамилия" name="fname"><br>
+        <input type="date" placeholder="Дата создания" name="timecr"><br>
+        <input class="button" type="submit" value="Поиск">
+
+        <!--input type="text" placeholder="дата создания" name="time"><br>
+        <input class="button" type="submit" value="Поиск"-->
+    </form>
+
+    {% for el in article %}
+    <div class="result">
+        <h3>Фамилия : {{ el.fname }}</h3>
+        <h3>Имя : {{ el.sname }}</h3>
+        <h3>Отчество : {{ el.tname }}</h3>
+
+        <a href="/posts/{{ el.id }}">Подробнее</a>
+        <hr style="border-width: 1px;">
+    </div>
+    {% endfor %}
+
+{% endblock %}

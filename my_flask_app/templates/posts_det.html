@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2>Заявление на административный отпуск</h2>
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="result">
+        <h2>Фамилия : {{ article.fname }}</h2>
+        <h2>Имя : {{ article.sname }}</h2>
+        <h2>Отчество : {{ article.tname }}</h2>
+        <h2>Должность : {{ article.status }}</h2>
+        <h2>Табельный номер : {{ article.tabnum }}</h2>
+        <h2>Телефон : {{ article.phone }}</h2>
+        <h2>Вид : {{ article.vid }}</h2>
+        <h2>Основание, причина необходимости предоставления отпуска : {{ article.reason }}</h2>
+        <h2>Период  {{ article.time}} по  {{ article.timend}} </h2>
+
+
+
+        <button><a href="/posts">Назад</a></button>
+
+        <button class="delete"><a href="/posts/{{ article.id }}/delete">Удалить</a></button>
+        <button class="delete"><a href="/posts/{{ article.id }}/print">Печать</a></button>
+
+    </div>
+
+{% endblock %}

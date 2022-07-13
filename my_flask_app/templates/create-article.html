@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+создание
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form  method ="post">
+        <input type="text" placeholder="Введите вашу фамилию:" name="fname" ><br>
+        <input type="text" placeholder="Введите ваше имя:" name="sname"  ><br>
+        <input type="text" placeholder="Введите ваше отчество:" name="tname"  ><br>
+        <input type="text" placeholder="Введите ваше структурное подразделение:" name="otdel"  ><br>
+        <input type="text" placeholder="Введите вашу должность:" name="status"  ><br>
+        <input type="text" placeholder="Введите ваш табельный номер:" name="tabnum"  ><br>
+        <input type="text" placeholder="Введите ваш телефон:" name="phone"  ><br>
+        <input type="text" placeholder="Введите вид отпуска (учебный/без сохранения заработной платы и др.):" name="vid"  ><br>
+        <input type="text" placeholder="Введите ваше Основание/Причину:" name="reason"  ><br>
+        <input type="date" placeholder="Введите дату начала" name="time"  ><br>
+        <input type="date" placeholder="Введите дату окончания:" name="timend"  ><br>
+        <input class="button" type="submit" value="Отправить">
+    </form>
+</div>
+{% endblock %}

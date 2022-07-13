@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+создание
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form  method ="post">
+        <input type="text" placeholder="И.О.Фамилия:" name="fioname" ><br>
+        <input type="text" placeholder="Должность:" name="admstatus"  ><br>
+        <input class="button" type="submit" value="Отправить">
+    </form>
+</div>
+{% endblock %}
